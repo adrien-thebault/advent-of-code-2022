@@ -1,27 +1,4 @@
-use std::{cmp::Reverse, str::FromStr};
-
-fn main() {
-    let groups = INPUT.split("\n\n");
-    let mut groups_sum = groups
-        .into_iter()
-        .map(|g| {
-            g.split('\n')
-                .into_iter()
-                .map(usize::from_str)
-                .map(|r| r.expect("invalid usize"))
-                .sum::<usize>()
-        })
-        .collect::<Vec<_>>();
-    groups_sum.sort_by_key(|x| Reverse(*x));
-
-    let exo1 = groups_sum.iter().max().expect("no max found");
-    let exo2 = groups_sum[0..3].iter().sum::<usize>();
-
-    println!("{}", &exo1);
-    println!("{}", &exo2);
-}
-
-const INPUT: &str = r#"18814
+18814
 
 1927
 12782
@@ -2263,4 +2240,4 @@ const INPUT: &str = r#"18814
 2012
 4994
 7160
-6253"#;
+6253

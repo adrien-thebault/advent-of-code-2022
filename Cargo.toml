@@ -5,6 +5,6 @@ version = "0.1.0"
 
 [[bin]]
 name = "day1"
-path = "src/day1.rs"
+path = "src/day1/main.rs"
 
 [dependencies]
