@@ -16,9 +16,6 @@ fn main() {
         .collect::<Vec<usize>>();
     groups_sum.sort_by_key(|x| Reverse(*x));
 
-    let exo1 = groups_sum.iter().max().expect("no max found");
-    let exo2 = groups_sum.iter().take(3).sum::<usize>();
-
-    println!("{}", &exo1);
-    println!("{}", &exo2);
+    println!("{}", groups_sum.iter().max().expect("no max found"));
+    println!("{}", groups_sum.iter().take(3).sum::<usize>());
 }
