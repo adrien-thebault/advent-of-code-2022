@@ -54,7 +54,7 @@ fn main() {
     )
 }
 
-#[derive(PartialEq, Eq)]
+#[derive(Copy, Clone, PartialEq, Eq)]
 enum Game {
     Rock = 1,
     Paper = 2,
@@ -89,7 +89,7 @@ impl TryFrom<&str> for Game {
     }
 }
 
-#[derive(PartialEq, Eq)]
+#[derive(Copy, Clone, PartialEq, Eq)]
 enum Outcome {
     Loss = 0,
     Draw = 3,
